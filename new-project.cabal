@@ -1,0 +1,49 @@
+cabal-version:       2.4
+name:                new-project
+version:             0.1.0.0
+-- synopsis:
+-- description:
+-- bug-reports:
+-- license:
+license-file:        LICENSE
+-- author:              
+-- maintainer:          
+-- copyright:
+-- category:
+extra-source-files:  CHANGELOG.md
+
+library
+  exposed-modules:     Lib 
+  build-depends:       base >= 4 && < 5
+                     , mtl
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  -- other-modules:
+  -- other-extensions:
+
+executable new-project
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >= 4 && < 5
+                     , new-project
+  -- hs-source-dirs:
+  default-language:    Haskell2010
+
+test-suite test
+  default-language:
+    Haskell2010
+  type:
+    exitcode-stdio-1.0
+  hs-source-dirs:
+    tests
+  main-is:
+    test.hs
+  build-depends:
+      base >= 4 && < 5
+    , new-project   
+    , tasty >= 0.7
+    , tasty-hunit
+    , tasty-quickcheck
+    , tasty-smallcheck
+
