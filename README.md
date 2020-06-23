@@ -11,6 +11,7 @@ projectname=my-project
 Download template and update references:
 ```bash
 git clone https://github.com/turnerdev/haskell-nix-template.git ./$projectname
+cd ./$projectname
 find . -type f -exec sed -i 's/new-project/$projectname/g' {} +
 mv new-project.cabal $projectname.cabal
 ```
